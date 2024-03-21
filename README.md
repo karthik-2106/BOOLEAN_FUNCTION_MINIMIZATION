@@ -12,11 +12,11 @@ F2=xy’z+x’y’z+w’xy+wx’y+wxy
 
 Hardware – PCs, Cyclone II , USB flasher
 
-**Software – Quartus prime**
+Software – Quartus prime
 
-**Theory**
+**Truth table**
 
-**Logic Diagram**
+![image](https://github.com/karthik-2106/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319557/56cf0169-4da7-45ee-bbb7-eccc06d986f4)
 
 **Procedure**
 
@@ -32,19 +32,31 @@ Hardware – PCs, Cyclone II , USB flasher
 
 
 **Program:**
+```
+Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+module combinationalcircuit(A,B,C,D,F1);
+input A,B,C,D;
+output F1;
+wire x1,x2,x3,x4,x5;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign F1=x1|x2|x3|x4|x5;
+endmodule
 
-Developed by: RegisterNumber:*/
-
-
+Developed by: KARTHIKEYAN M
+RegisterNumber:212223110020
+```
 **RTL realization**
 
-**Output:**
+![image](https://github.com/karthik-2106/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319557/91b30795-fa57-4b1c-832d-5d34cca885bc)
 
-**RTL**
+**Output Timing Diagram:**
+![image](https://github.com/karthik-2106/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319557/e67a4c31-037a-4c43-896d-499220c7103a)
 
-**Timing Diagram**
 
 **Result:**
 
